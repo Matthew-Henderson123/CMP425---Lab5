@@ -174,6 +174,7 @@ int main() {
 						// For now just set the connection state to Disconnected. 
 						// FIXME: But we should also remove the inactive connection from the vector and remove the tank from the game.
 						player_connections.at(i).state = Disconnected;
+						game.SetTankConnection(Disconnected, i);
 					}
 				}
 			}

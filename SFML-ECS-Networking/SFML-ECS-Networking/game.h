@@ -1,5 +1,6 @@
 #pragma once
 #include "tank.h"
+#include "connection.h"
 
 class Game
 {
@@ -13,6 +14,7 @@ public:
 	void NetworkUpdate(float dt, TankMessage data);
 	void Render(sf::RenderWindow &window);
 	void AddTank(std::string body_tex, std::string barrel_tex, sf::Vector2f position);
+	void SetTankConnection(ConnState conn, int id);
 	TankMessage GetNetworkUpdate();
 
 private:
